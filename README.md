@@ -21,7 +21,7 @@ And a lots of other *awesome* gems you can found in Gemfile
 
 ## Contributions
 
-After checking [Github Issues](https://github.com/BdEINSALyon/Taquilla), feel free to fork and create a Pull Request.
+After checking [Github Issues](https://github.com/PhilippeGeek/Taquilla), feel free to fork and create a Pull Request.
 
 While we may not merge your PR as is, they serve to start conversations and improve the general Taquilla 
 experience for all users.
