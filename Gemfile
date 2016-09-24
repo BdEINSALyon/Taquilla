@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 
+gem 'bundler', '>= 1.8.4'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use postgresql as the database for Active Record
@@ -16,6 +18,14 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 
 gem 'haml'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-datatables'
+  gem 'rails-assets-select2'
+  gem 'rails-assets-pnotify'
+  gem 'rails-assets-momentjs'
+  gem 'rails-assets-font-awesome'
+end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -30,6 +40,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'unobtrusive_flash', '>=3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

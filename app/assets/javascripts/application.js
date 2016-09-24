@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require pnotify
+//= require unobtrusive_flash
 //= require_tree .
