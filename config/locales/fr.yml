@@ -24,6 +24,7 @@ fr:
     models:
       admin_user: Gestionnaire
       organization: Organisation
+      event: Evènement
     attributes:
       admin_user:
         first_name: Prénom
@@ -42,6 +43,20 @@ fr:
         description: Description
         parent_organization: Organisation Principale
         organizations: Sous-organisations
+      event:
+        name: Nom
+        location: Lieu
+        start_date: Début
+        end_date: Fin
+        status: Etat
+        seats: Nombre de places
+  status:
+    closed: Fermé
+    public: Public
+    private: Privé
+  event:
+    status:
+      closed: Annulé
   hello: "Hello world"
   home:
     index:
@@ -56,3 +71,5 @@ fr:
     organization:
       identity: "Indentité de l'organisation"
       information: "Informations"
+    event:
+      about: "A propos de l'évènement"
