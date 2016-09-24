@@ -8,10 +8,10 @@ class Event < ApplicationRecord
 
   before_validation do
     if end_date.nil?
-      end_date= start_date
+      write_attribute :end_date, start_date
     end
     if seats.nil?
-      seats= 0
+      write_attribute :seats, 0
     end
   end
 
