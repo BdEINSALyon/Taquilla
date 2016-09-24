@@ -12,6 +12,7 @@
  *
  *= require bootstrap
  *= require pnotify
- *= require_tree .
+ *= require home
+ *= require nav
  *= require_self
  */

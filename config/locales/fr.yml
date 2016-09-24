@@ -20,6 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 fr:
+  activerecord:
+    models:
+      admin_user: Gestionnaire
+    attributes:
+      admin_user:
+        first_name: Prénom
+        last_name: Nom
+        email: Email
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe
+        current_sign_in_at: Dernière connexion
+        created_at: Moment d'inscription
+        sign_in_count: Nombre de connexions
   hello: "Hello world"
   home:
     index:
@@ -27,3 +40,7 @@ fr:
       description: "Ce site regroupe les billetterie des différents évènements VA du BdE et des Asso INSA"
   login: "Connexion"
   registration: "Inscription"
+  admin:
+    user:
+      identity: "Identité"
+      login: "Identifiants"

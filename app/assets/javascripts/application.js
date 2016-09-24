@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require pnotify
 //= require unobtrusive_flash
-//= require_tree .
+//= require cable
+//= require flashes
+//= require home
