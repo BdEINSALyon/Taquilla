@@ -17,7 +17,7 @@ ActiveAdmin.register Organization do
     f.inputs I18n.t('admin.organization.identity') do
       f.input :name
       f.input :location
-      f.input :parent_organization
+      f.input :parent_organization, collection: Organization.managed_by(current_admin_user)
     end
     f.inputs I18n.t('admin.organization.information') do
       f.input :contact_email
@@ -25,6 +25,13 @@ ActiveAdmin.register Organization do
       f.input :description
     end
     f.actions
+  end
+
+  controller do
+    def create
+      super
+      current_admin_user.add_role :admin, resource
+    end
   end
 
 end

@@ -47,6 +47,9 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'omniauth'
 
+gem 'cancancan'
+gem 'rolify'
+
 gem 'rails-i18n'
 
 gem 'activeadmin', github: 'activeadmin'

@@ -73,3 +73,6 @@ fr:
       information: "Informations"
     event:
       about: "A propos de l'évènement"
+    dashboard:
+      first_welcome: "Bienvenu sur la billetterie Inter-Asso !"
+      my_events: "Mes évènements"

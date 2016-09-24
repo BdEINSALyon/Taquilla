@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160924151527) do
+ActiveRecord::Schema.define(version: 20160924170558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,12 @@ ActiveRecord::Schema.define(version: 20160924151527) do
     t.integer "organization_id", null: false
   end
 
+  create_table "admin_users_roles", id: false, force: :cascade do |t|
+    t.integer "admin_user_id"
+    t.integer "role_id"
+    t.index ["admin_user_id", "role_id"], name: "index_admin_users_roles_on_admin_user_id_and_role_id", using: :btree
+  end
+
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.string   "location"
@@ -74,6 +80,16 @@ ActiveRecord::Schema.define(version: 20160924151527) do
     t.integer  "parent_organization_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "resource_type"
+    t.integer  "resource_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
+    t.index ["name"], name: "index_roles_on_name", using: :btree
   end
 
 end
