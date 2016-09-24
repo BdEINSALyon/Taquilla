@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: Taquilla_production
-  username: Taquilla
-  password: <%= ENV['TAQUILLA_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
