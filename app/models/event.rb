@@ -5,6 +5,7 @@ class Event < ApplicationRecord
   validates_presence_of :status
   validates_presence_of :start_date
   validates_presence_of :end_date
+  validates_presence_of :organization
 
   before_validation do
     if end_date.nil?
