@@ -23,6 +23,7 @@ fr:
   activerecord:
     models:
       admin_user: Gestionnaire
+      organization: Organisation
     attributes:
       admin_user:
         first_name: Prénom
@@ -33,6 +34,14 @@ fr:
         current_sign_in_at: Dernière connexion
         created_at: Moment d'inscription
         sign_in_count: Nombre de connexions
+      organization:
+        name: Nom
+        location: Lieu
+        contact_email: Email
+        website: Site web
+        description: Description
+        parent_organization: Organisation Principale
+        organizations: Sous-organisations
   hello: "Hello world"
   home:
     index:
@@ -44,3 +53,6 @@ fr:
     user:
       identity: "Identité"
       login: "Identifiants"
+    organization:
+      identity: "Indentité de l'organisation"
+      information: "Informations"
