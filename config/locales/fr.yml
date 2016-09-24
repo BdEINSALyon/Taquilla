@@ -23,4 +23,7 @@ fr:
   hello: "Hello world"
   home:
     index:
-      welcome: "Bienvenu"
+      welcome: "Vivez la VA simplement !"
+      description: "Ce site regroupe les billetterie des différents évènements VA du BdE et des Asso INSA"
+  login: "Connexion"
+  registration: "Inscription"

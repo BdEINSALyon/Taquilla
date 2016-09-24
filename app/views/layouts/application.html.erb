@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Taquilla</title>
+    <title>BdE INSA Lyon</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,21 @@
   </head>
 
   <body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="<%= root_path %>">
+          <%= image_tag 'logo-bde.png', alt: 'BdE INSA Lyon', class: 'logo-bde' %>
+        </a>
+      </div>
+      <div class="nav navbar-nav navbar-right" id="login-buttons">
+        <a href="#" class="btn btn-sm btn-default"><%= t('registration') %></a>
+        <a href="#" class="btn btn-sm btn-primary"><%= t('login') %></a>
+      </div>
+    </div>
+  </nav>
+  <div id="page">
     <%= yield %>
+  </div>
   </body>
 </html>
