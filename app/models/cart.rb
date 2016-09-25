@@ -6,6 +6,7 @@ class Cart < ApplicationRecord
   has_many :events, through: :tickets
   belongs_to :discount
   belongs_to :event
+  belongs_to :user
   has_many :payments
 
   validates_presence_of :event

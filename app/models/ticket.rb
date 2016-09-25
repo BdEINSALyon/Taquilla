@@ -1,5 +1,6 @@
 class Ticket < ApplicationRecord
   belongs_to :pass, counter_cache: true
+  belongs_to :cart
   has_one :event, through: :pass
   has_one :organization, through: :pass
   has_and_belongs_to_many :ticket_options

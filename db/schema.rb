@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160925101242) do
+ActiveRecord::Schema.define(version: 20160925121150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,18 @@ ActiveRecord::Schema.define(version: 20160925101242) do
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "event_id"
+  end
+
+  create_table "discounts", force: :cascade do |t|
+    t.string   "code"
+    t.text     "description"
+    t.integer  "seats"
+    t.decimal  "amount_off"
+    t.decimal  "percent_off"
+    t.integer  "event_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -106,6 +118,22 @@ ActiveRecord::Schema.define(version: 20160925101242) do
     t.integer  "tickets_count"
   end
 
+  create_table "passes_ticket_options", id: false, force: :cascade do |t|
+    t.integer "ticket_option_id", null: false
+    t.integer "pass_id",          null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.string   "status"
+    t.string   "method"
+    t.decimal  "amount"
+    t.string   "pid"
+    t.text     "data"
+    t.integer  "cart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "roles", force: :cascade do |t|
     t.string   "name"
     t.string   "resource_type"
@@ -114,6 +142,22 @@ ActiveRecord::Schema.define(version: 20160925101242) do
     t.datetime "updated_at"
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
     t.index ["name"], name: "index_roles_on_name", using: :btree
+  end
+
+  create_table "ticket_options", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.decimal  "price"
+    t.integer  "seats"
+    t.string   "status"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "event_id"
+  end
+
+  create_table "ticket_options_tickets", id: false, force: :cascade do |t|
+    t.integer "ticket_option_id", null: false
+    t.integer "ticket_id",        null: false
   end
 
   create_table "tickets", force: :cascade do |t|
@@ -125,6 +169,30 @@ ActiveRecord::Schema.define(version: 20160925101242) do
     t.datetime "updated_at", null: false
     t.integer  "pass_id"
     t.integer  "cart_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
 end
