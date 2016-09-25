@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160925121150) do
+ActiveRecord::Schema.define(version: 20160925151518) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,16 @@ ActiveRecord::Schema.define(version: 20160925121150) do
     t.index ["admin_user_id", "role_id"], name: "index_admin_users_roles_on_admin_user_id_and_role_id", using: :btree
   end
 
+  create_table "answers", force: :cascade do |t|
+    t.text     "data"
+    t.integer  "ticket_id"
+    t.integer  "question_id"
+    t.string   "answerable_type"
+    t.integer  "answerable_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
   create_table "carts", force: :cascade do |t|
     t.string   "status"
     t.integer  "discount_id"
@@ -89,6 +99,25 @@ ActiveRecord::Schema.define(version: 20160925121150) do
     t.integer  "organization_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "organization_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "invitations", force: :cascade do |t|
+    t.string   "email"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "invitations_passes", id: false, force: :cascade do |t|
+    t.integer "pass_id",       null: false
+    t.integer "invitation_id", null: false
   end
 
   create_table "organizations", force: :cascade do |t|
@@ -132,6 +161,23 @@ ActiveRecord::Schema.define(version: 20160925121150) do
     t.integer  "cart_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "questionings", force: :cascade do |t|
+    t.integer  "question_id"
+    t.string   "questionable_type"
+    t.integer  "questionable_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "type"
+    t.string   "question"
+    t.text     "description"
+    t.boolean  "required"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "roles", force: :cascade do |t|

@@ -6,6 +6,8 @@ class TicketOption < ApplicationRecord
   include StatusConcern
   use_statuses %w(opened closed), default: :opened
 
+  include QuestionsConcern
+
   validates_presence_of :event
 
   def real_tickets

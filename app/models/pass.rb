@@ -7,6 +7,8 @@ class Pass < ApplicationRecord
   include StatusConcern
   use_statuses %w(public invitation closed public_va invitation_va), default: :closed
 
+  include QuestionsConcern
+
   validates_presence_of [:name, :price, :event]
   validates_inclusion_of :price, in: (0..Float::INFINITY)
   validates_exclusion_of [:entry_start, :entry_end, :pass_start, :pass_end], in: ->(p) {p.event&.start_date..p.event&.end_date}

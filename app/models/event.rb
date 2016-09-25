@@ -6,6 +6,8 @@ class Event < ApplicationRecord
   include StatusConcern
   use_statuses %w(public private closed), default: :private
 
+  include QuestionsConcern
+
   validates_presence_of [:name, :start_date, :end_date, :organization]
 
   scope :not_full, -> {joins('passes').having('sum(passes.tickets_count) < seats OR seats <= 0')}
