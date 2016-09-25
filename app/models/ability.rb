@@ -12,6 +12,9 @@ class Ability
       can :create, User
     end
 
+    can :create, Invitation
+    can :manage, Invitation, user: user
+
     can :read, Event
     can :read, Pass, status: %w(public public_va)
 
