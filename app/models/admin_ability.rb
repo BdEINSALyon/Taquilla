@@ -17,6 +17,7 @@ class AdminAbility
     can :create, Organization
 
     can :manage, Organization, id: Organization.with_role(:admin, user).pluck(:id)
+    can :read, user.organizations
     can :manage, Cart, event: {organization: user.organizations}
     can :manage, Event, organization: user.organizations
     can :manage, Payment, cart: {event: {organization: user.organizations}}
