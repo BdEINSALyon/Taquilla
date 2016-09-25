@@ -13,15 +13,19 @@ class AdminAbility
 
     can :read, ActiveAdmin::Page
 
+    can :index, Organization
     can :create, Organization
+
     can :manage, Organization, id: Organization.with_role(:admin, user).pluck(:id)
+    can :manage, Cart, event: {organization: user.organizations}
+    can :manage, Event, organization: user.organizations
+    can :manage, Payment, cart: {event: {organization: user.organizations}}
+    can :manage, Ticket, event: {organization: user.organizations}
+    can :manage, TicketOption, event: {organization: user.organizations}
+    can :manage, Pass, event: {organization: user.organizations}
+    can :manage, Discount, event: {organization: user.organizations}
 
-    if Organization.with_role([:manager, :admin], user).length > 0
-      can :create, Event
-      can :manage, Event, organization_id: Organization.with_role(:admin, user).pluck(:id)
-    end
-
-    #can :manage, 'RegistrationToken', organization: Organization.with_role(:manager, user)
+    can :read, User, carts: {event: {organization: user.organizations}, status: %w(bought)}
 
     # Define abilities for the passed in user here. For example:
     #
