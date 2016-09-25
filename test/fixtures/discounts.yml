@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  description: MyText
+  seats: 1
+  amount_off: 9.99
+  percent_off: 9.99
+
+two:
+  code: MyString
+  description: MyText
+  seats: 1
+  amount_off: 9.99
+  percent_off: 9.99

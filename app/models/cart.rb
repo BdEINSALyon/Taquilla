@@ -4,6 +4,7 @@ class Cart < ApplicationRecord
 
   has_many :tickets
   has_many :events, through: :tickets
+  belongs_to :discount
 
   scope :buying, -> {where(status: 'buying')}
   scope :bought, -> {where(status: 'bought')}
