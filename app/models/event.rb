@@ -1,6 +1,7 @@
 class Event < ApplicationRecord
   belongs_to :organization
   has_many :passes
+  has_many :ticket_options
 
   include StatusConcern
   use_statuses %w(public private closed), default: :private
