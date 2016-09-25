@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160924170558) do
+ActiveRecord::Schema.define(version: 20160925101242) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,14 @@ ActiveRecord::Schema.define(version: 20160924170558) do
     t.index ["admin_user_id", "role_id"], name: "index_admin_users_roles_on_admin_user_id_and_role_id", using: :btree
   end
 
+  create_table "carts", force: :cascade do |t|
+    t.string   "status"
+    t.integer  "discount_id"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.string   "location"
@@ -82,6 +90,22 @@ ActiveRecord::Schema.define(version: 20160924170558) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "passes", force: :cascade do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.integer  "seats"
+    t.string   "status"
+    t.text     "description"
+    t.datetime "entry_start"
+    t.datetime "entry_closed"
+    t.datetime "pass_start"
+    t.datetime "pass_end"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "event_id"
+    t.integer  "tickets_count"
+  end
+
   create_table "roles", force: :cascade do |t|
     t.string   "name"
     t.string   "resource_type"
@@ -90,6 +114,17 @@ ActiveRecord::Schema.define(version: 20160924170558) do
     t.datetime "updated_at"
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
     t.index ["name"], name: "index_roles_on_name", using: :btree
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "pass_id"
+    t.integer  "cart_id"
   end
 
 end
