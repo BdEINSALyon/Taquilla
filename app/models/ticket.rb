@@ -3,7 +3,7 @@ class Ticket < ApplicationRecord
   has_one :event, through: :pass
   has_one :organization, through: :pass
 
-  validates_presence_of :status
+  validates_presence_of [:status, :pass]
   validates_inclusion_of :status, in: %w(buying bought used refunded canceled)
 
   before_validation do
