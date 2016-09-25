@@ -1,5 +1,5 @@
 class Ticket < ApplicationRecord
-  belongs_to :pass
+  belongs_to :pass, counter_cache: true
   has_one :event, through: :pass
   has_one :organization, through: :pass
 
