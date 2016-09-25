@@ -8,4 +8,6 @@ class Organization < ApplicationRecord
   has_many :organizations, :as => :parent_organization
   has_and_belongs_to_many :admin_users
   has_many :events
+  has_many :images
+
 end

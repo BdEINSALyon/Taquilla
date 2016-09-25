@@ -24,6 +24,7 @@ class AdminAbility
     can :manage, TicketOption, event: {organization: user.organizations}
     can :manage, Pass, event: {organization: user.organizations}
     can :manage, Discount, event: {organization: user.organizations}
+    can :manage, Image, organization: user.organizations
 
     can :read, User, carts: {event: {organization: user.organizations}, status: %w(bought)}
 
