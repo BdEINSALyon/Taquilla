@@ -3,6 +3,7 @@ class Pass < ApplicationRecord
   has_one :organization, through: :event
   has_many :tickets
   has_and_belongs_to_many :ticket_options
+  has_and_belongs_to_many :invitations
 
   include StatusConcern
   use_statuses %w(public invitation closed public_va invitation_va), default: :closed

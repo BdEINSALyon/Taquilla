@@ -4,6 +4,7 @@ class Ticket < ApplicationRecord
   has_one :event, through: :pass
   has_one :organization, through: :pass
   has_and_belongs_to_many :ticket_options
+  belongs_to :invitation
 
   include StatusConcern
   use_statuses %w(buying bought used refunded canceled), default: :buying
