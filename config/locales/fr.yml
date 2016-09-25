@@ -49,8 +49,20 @@ fr:
         created_at: Moment d'inscription
         sign_in_count: Nombre de connexions
       answer:
+        data: Données
+        question: Question
+        answerable: Objet
+        ticket: Ticket
       cart:
+        status: Etat
+        payment: Paiement
+        user: Propriétaire
+        tickets: Tickets
       discount:
+        seats: Quantité
+        code: Code
+        amount_off: Montant réduction
+        percent_off: Pourcentage réduction
       event:
         name: Nom
         location: Lieu
@@ -58,8 +70,14 @@ fr:
         end_date: Fin
         status: Etat
         seats: Nombre de places
-      image: Image
-      invitation: Invitation
+      image:
+        name: Nom
+      invitation:
+        email: Email
+        expiration: Fin de validité
+        user: Hôte
+        passes: Billets proposés
+        tickets: Billets achetés
       organization:
         name: Nom
         location: Lieu
@@ -80,12 +98,37 @@ fr:
         entry_start: Début du contrôle d'entrée
         entry_end: Fin du contrôle d'entrée
       payment:
+        method: Méthode
+        amount: Montant
+        pid: Identifiant
+        data: Données
+        status: Etat
+        cart: Pannier
       question:
+        type: Type
+        question: Question
+        description: Explications
+        required: Requis
+        answers: Réponses
       questioning:
+        question: Question
+        questionable: Objet
       role:
       ticket:
+        first_name: Prénom
+        last_name: Nom
+        email: Email
+        status: Etat
       ticket_option:
+        name: Nom
+        price: Prix
+        description: Description
+        seats: Quantité
+        status: Etat
       user:
+        first_name: Prénom
+        last_name: Nom
+        email: Email
   status:
     closed: Fermé
     public: Public
@@ -98,6 +141,17 @@ fr:
     used: Utilisé
     refunded: Remboursé
     canceled: Annulé
+    opened: Ouvert
+    closed: Fermé
+  ticket_option:
+    status:
+      opened: Disponible
+      closed: Indisponible
+  payment:
+    status:
+      paying: En cours de paiement
+      paid: Payé
+      refunded: Remboursé
   event:
     status:
       closed: Annulé
