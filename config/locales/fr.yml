@@ -23,8 +23,21 @@ fr:
   activerecord:
     models:
       admin_user: Gestionnaire
-      organization: Organisation
+      answer: Réponse
+      cart: Pannier
+      discount: Réduction
       event: Evènement
+      image: Image
+      invitation: Invitation
+      organization: Organisation
+      pass: Entrée
+      payment: Paiement
+      question: Question
+      questioning: Interrogation
+      role: Rôle
+      ticket: Ticket
+      ticket_option: Option
+      user: Utilisateurs
     attributes:
       admin_user:
         first_name: Prénom
@@ -35,6 +48,18 @@ fr:
         current_sign_in_at: Dernière connexion
         created_at: Moment d'inscription
         sign_in_count: Nombre de connexions
+      answer:
+      cart:
+      discount:
+      event:
+        name: Nom
+        location: Lieu
+        start_date: Début
+        end_date: Fin
+        status: Etat
+        seats: Nombre de places
+      image: Image
+      invitation: Invitation
       organization:
         name: Nom
         location: Lieu
@@ -43,13 +68,24 @@ fr:
         description: Description
         parent_organization: Organisation Principale
         organizations: Sous-organisations
-      event:
+      pass:
+        event: Evènement
         name: Nom
-        location: Lieu
-        start_date: Début
-        end_date: Fin
-        status: Etat
+        price: Prix
         seats: Nombre de places
+        status: Statut
+        description: Description
+        pass_start: Début
+        pass_end: Fin
+        entry_start: Début du contrôle d'entrée
+        entry_end: Fin du contrôle d'entrée
+      payment:
+      question:
+      questioning:
+      role:
+      ticket:
+      ticket_option:
+      user:
   status:
     closed: Fermé
     public: Public

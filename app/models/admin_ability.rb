@@ -15,20 +15,23 @@ class AdminAbility
 
     can :index, Organization
     can :create, Organization
+    
+    events = Event.joins(:organization).where(organization: user.organizations)
 
     can :manage, Organization, id: Organization.with_role(:admin, user).pluck(:id)
     can :read, user.organizations
-    can :manage, Cart, event: {organization: user.organizations}
+    can :manage, Cart, event: events
     can :manage, Event, organization: user.organizations
-    can :manage, Payment, cart: {event: {organization: user.organizations}}
-    can :manage, Ticket, event: {organization: user.organizations}
-    can :manage, TicketOption, event: {organization: user.organizations}
-    can :manage, Pass, event: {organization: user.organizations}
-    can :manage, Discount, event: {organization: user.organizations}
-    can :manage, Invitation, passes: {event: {organization: user.organizations}}
+    can :manage, Payment, cart: {event: events}
+    can :manage, Ticket, event: events
+    can :manage, TicketOption, event: events
+    can :manage, Pass, event: events
+    can :create, Pass
+    can :manage, Discount, event: events
+    can :manage, Invitation, passes: {event: events}
     can :manage, Image, organization: user.organizations
 
-    can :read, User, carts: {event: {organization: user.organizations}, status: %w(bought)}
+    can :read, User, carts: {event: events, status: %w(bought)}
 
     # Define abilities for the passed in user here. For example:
     #
