@@ -54,6 +54,14 @@ fr:
     closed: Fermé
     public: Public
     private: Privé
+    invitation: Invitation Uniquement
+    public_va: Carte VA Uniquement
+    invitation_va: Invitation VA Uniquement
+    buying: En cours d'achat
+    bought: Acheté
+    used: Utilisé
+    refunded: Remboursé
+    canceled: Annulé
   event:
     status:
       closed: Annulé

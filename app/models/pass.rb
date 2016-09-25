@@ -10,4 +10,9 @@ class Pass < ApplicationRecord
 
   scope :not_full, -> {where('tickets_count < seats OR seats <= 0')}
 
+  def self.statuses
+    %w(public invitation closed public_va invitation_va).map do |status|
+      [I18n.t("ticket.status.#{status}", default: I18n.t("status.#{status}", default: status.to_s.humanize))]
+    end
+  end
 end
