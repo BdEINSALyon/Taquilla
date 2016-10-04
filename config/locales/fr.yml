@@ -159,7 +159,7 @@ fr:
   home:
     index:
       welcome: "Vivez la VA simplement !"
-      description: "Ce site regroupe les billetterie des différents évènements VA du BdE et des Asso INSA"
+      description: "Billetteries des différents évènements VA du BdE"
   login: "Connexion"
   registration: "Inscription"
   admin:
@@ -174,3 +174,7 @@ fr:
     dashboard:
       first_welcome: "Bienvenu sur la billetterie Inter-Asso !"
       my_events: "Mes évènements"
+  devise:
+    sessions:
+      new:
+        login: "Connexion"

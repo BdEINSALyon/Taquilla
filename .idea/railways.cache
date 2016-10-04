@@ -32,6 +32,15 @@ batch_action_admin_organizations POST       /admin/organizations/batch_action(.:
                                  PATCH      /admin/organizations/:id(.:format)          admin/organizations#update
                                  PUT        /admin/organizations/:id(.:format)          admin/organizations#update
                                  DELETE     /admin/organizations/:id(.:format)          admin/organizations#destroy
+       batch_action_admin_passes POST       /admin/passes/batch_action(.:format)        admin/passes#batch_action
+                    admin_passes GET        /admin/passes(.:format)                     admin/passes#index
+                                 POST       /admin/passes(.:format)                     admin/passes#create
+                  new_admin_pass GET        /admin/passes/new(.:format)                 admin/passes#new
+                 edit_admin_pass GET        /admin/passes/:id/edit(.:format)            admin/passes#edit
+                      admin_pass GET        /admin/passes/:id(.:format)                 admin/passes#show
+                                 PATCH      /admin/passes/:id(.:format)                 admin/passes#update
+                                 PUT        /admin/passes/:id(.:format)                 admin/passes#update
+                                 DELETE     /admin/passes/:id(.:format)                 admin/passes#destroy
                  admin_dashboard GET        /admin/dashboard(.:format)                  admin/dashboard#index
   batch_action_admin_admin_users POST       /admin/admin_users/batch_action(.:format)   admin/admin_users#batch_action
                admin_admin_users GET        /admin/admin_users(.:format)                admin/admin_users#index
