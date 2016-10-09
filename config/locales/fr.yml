@@ -178,3 +178,16 @@ fr:
     sessions:
       new:
         login: "Connexion"
+        remember_me: "Se souvenir de moi"
+        register_me: "M'Inscrire"
+        forgotten_password: "J'ai oublié mon mot de passe"
+    registrations:
+      new:
+        sign_up: "S'inscrire"
+        minimum: "charactères au minimum"
+    passwords:
+      new:
+        forgot_your_password: "Mot de passe oublié ?"
+        send_me_my_reset_link: "M'envoyer mon lien de récupération"
+      edit:
+        reset_my_password: "Changer mon mot de passe"
