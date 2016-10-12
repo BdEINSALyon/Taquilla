@@ -160,6 +160,7 @@ fr:
     index:
       welcome: "Vivez la VA simplement !"
       description: "Billetteries des différents évènements VA du BdE"
+      i_go: "J'y vais"
   login: "Connexion"
   registration: "Inscription"
   admin:
