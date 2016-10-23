@@ -1,0 +1,17 @@
+#banner
+  .container
+    .text-center
+      %h1= t('.welcome')
+      %h2= t('.description')
+
+.container
+  .row
+    - @events.each do |event|
+      .col-md-4
+        .panel.panel-default
+          .panel-heading
+            %h4= event.name
+          .panel-body
+            %div= raw event.description
+          .panel-footer
+            = link_to t('.i_go'), event, class: %w(btn btn-default btn-block)

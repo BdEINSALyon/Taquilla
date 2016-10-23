@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+ruby '2.3.1'
+
+gem 'bundler', '>= 1.8.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -13,8 +16,16 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+
+gem 'haml'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-datatables'
+  gem 'rails-assets-select2'
+  gem 'rails-assets-pnotify'
+  gem 'rails-assets-momentjs'
+  gem 'rails-assets-font-awesome'
+end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -30,9 +41,29 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'unobtrusive_flash', '>=3'
+
+gem 'devise'
+gem 'devise-i18n'
+gem 'omniauth'
+
+gem 'cancancan'
+gem 'rolify'
+
+gem 'rails-i18n'
+
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+end
+
+group :test do
+  gem 'capybara'
+  gem 'minitest-rails'
+  gem 'minitest-rails-capybara'
 end
 
 group :development do

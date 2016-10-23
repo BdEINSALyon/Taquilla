@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: MyString
+  method: MyString
+  amount: 9.99
+  pid: MyString
+  data: MyText
+  cart_id: 1
+
+two:
+  status: MyString
+  method: MyString
+  amount: 9.99
+  pid: MyString
+  data: MyText
+  cart_id: 1

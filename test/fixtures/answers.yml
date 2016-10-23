@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: MyText
+  ticket_id: 1
+  question_id: 1
+  answerable_type: MyString
+  answerable_id: 1
+
+two:
+  data: MyText
+  ticket_id: 1
+  question_id: 1
+  answerable_type: MyString
+  answerable_id: 1

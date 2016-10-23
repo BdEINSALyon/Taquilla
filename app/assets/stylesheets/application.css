@@ -10,6 +10,16 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require bootstrap
+ *= require pnotify
+ *= require home
+ *= require nav
  *= require_self
  */
+.top-padding-1 {
+    padding-top: 1em;
+}
+
+.margin-top {
+    margin-top: 1em;
+}

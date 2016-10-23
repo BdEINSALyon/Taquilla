@@ -10,38 +10,14 @@
     </facet>
   </component>
   <component name="ModuleRunConfigurationManager">
-    <configuration default="false" name="test: Taquilla" type="RakeRunConfigurationType" factoryName="Rake">
+    <configuration default="false" name="Development: Taquilla" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
       <module name="Taquilla" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="spec: Taquilla" type="RakeRunConfigurationType" factoryName="Rake">
-      <module name="Taquilla" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
@@ -50,12 +26,13 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
       <method />
     </configuration>
     <configuration default="false" name="Production: Taquilla" type="RailsRunConfigurationType" factoryName="Rails">
@@ -83,14 +60,13 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Development: Taquilla" type="RailsRunConfigurationType" factoryName="Rails">
-      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+    <configuration default="false" name="spec: Taquilla" type="RakeRunConfigurationType" factoryName="Rake">
       <module name="Taquilla" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
@@ -99,13 +75,162 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test: Taquilla" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="Taquilla" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="Taquilla" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift) -Itest" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$MODULE_DIR$/test" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/{*_test,test_*}.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method>
+        <option name="RakeTask" enabled="true" TASK_CMD="db:migrate" />
+        <option name="RakeTask" enabled="true" TASK_CMD="db:test:prepare" />
+      </method>
+    </configuration>
+    <configuration default="false" name="bower:install[options]: Taquilla" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+      <module name="Taquilla" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="bower:install" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="db:migrate: Taquilla" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+      <module name="Taquilla" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:migrate" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="routes: Taquilla" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+      <module name="Taquilla" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="routes" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="db:test:prepare: Taquilla" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+      <module name="Taquilla" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:test:prepare" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
       <method />
     </configuration>
   </component>
@@ -119,71 +244,109 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bundle" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="RVM: ruby-2.3.1" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="actioncable (v5.0.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="actionmailer (v5.0.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="actionpack (v5.0.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="actionview (v5.0.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activejob (v5.0.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activemodel (v5.0.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activerecord (v5.0.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activesupport (v5.0.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="arel (v7.1.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.12.5, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="byebug (v9.0.5, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.2.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.4.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.10.0, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.0.2, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="execjs (v2.7.0, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.14, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="globalid (v0.3.7, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.6.0, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.2.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="listen (v3.0.8, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="loofah (v2.0.3, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mail (v2.6.4, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="method_source (v0.8.2, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mime-types (v3.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mime-types-data (v3.2016.0521, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mini_portile2 (v2.1.0, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.9.0, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.12.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="nio4r (v1.2.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.8, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="pg (v0.18.4, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="pkg-config (v1.1.7, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="puma (v3.6.0, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rack (v2.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails (v5.0.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v2.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.0.3, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="railties (v5.0.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rake (v11.2.2, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rb-fsevent (v0.9.7, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rb-inotify (v0.9.7, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sass (v3.4.22, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.6, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="spring (v1.7.2, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="spring-watcher-listen (v2.0.0, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sprockets (v3.7.0, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.1.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="thor (v0.19.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.5, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="tilt (v2.0.5, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="turbolinks (v5.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="turbolinks-source (v5.0.0, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="uglifier (v3.0.2, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="web-console (v3.3.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.6.4, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.2, RVM: ruby-2.3.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actioncable (v5.0.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actionmailer (v5.0.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actionpack (v5.0.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actionview (v5.0.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activeadmin (v1.0.0.pre4@f89268, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activejob (v5.0.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activemodel (v5.0.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activerecord (v5.0.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activesupport (v5.0.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.4.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="arbre (v1.1.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="arel (v7.1.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.11, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bourbon (v4.2.7, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.13.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="byebug (v9.0.5, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cancancan (v1.15.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="capybara (v2.9.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.2.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.4.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.10.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.0.2, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="devise (v4.2.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="devise-i18n (v1.1.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="execjs (v2.7.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.14, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="formtastic (v3.1.4, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="formtastic_i18n (v0.6.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="globalid (v0.3.7, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.7, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="has_scope (v0.7.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hashie (v3.4.6, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="inherited_resources (v1.6.0@4434f0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.6.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.2.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jquery-ui-rails (v5.0.5, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari (v0.17.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="listen (v3.0.8, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="loofah (v2.0.3, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mail (v2.6.4, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="method_source (v0.8.2, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types (v3.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types-data (v3.2016.0521, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mini_portile2 (v2.1.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.9.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest-capybara (v0.8.2, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest-metadata (v0.6.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest-rails (v3.0.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest-rails-capybara (v3.0.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.12.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nio4r (v1.2.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.8, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="omniauth (v1.3.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pg (v0.18.4, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pkg-config (v1.1.7, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="polyamorous (v1.3.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="puma (v3.6.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack (v2.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails (v5.0.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-assets-bootstrap (v3.3.7, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-assets-datatables (v1.10.12, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-assets-font-awesome (v4.6.3, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-assets-jquery (v3.1.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-assets-momentjs (v2.15.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-assets-pnotify (v3.0.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-assets-select2 (v4.0.3, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v2.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.0.3, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-i18n (v5.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="railties (v5.0.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v11.2.2, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ransack (v1.8.2, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rb-fsevent (v0.9.7, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rb-inotify (v0.9.7, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="responders (v2.3.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rolify (v5.1.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sass (v3.4.22, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.6, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spring (v1.7.2, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="spring-watcher-listen (v2.0.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sprockets (v3.7.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.1.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="thor (v0.19.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.5, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tilt (v2.0.5, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="turbolinks (v5.0.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="turbolinks-source (v5.0.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="uglifier (v3.0.2, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="unobtrusive_flash (v3.2.0, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.6, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="web-console (v3.3.1, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.6.4, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.2, RVM: ruby-2.3.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="xpath (v2.0.0, RVM: ruby-2.3.1) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
