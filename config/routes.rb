@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get 'events/show'
 
   devise_for :users
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+  devise_for :admin_users
+  authenticated :admin_user do
+
+  end
   root to: 'home#index'
   resources :events
 

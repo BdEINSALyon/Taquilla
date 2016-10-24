@@ -52,7 +52,6 @@ gem 'rolify'
 
 gem 'rails-i18n'
 
-gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 group :development, :test do
