@@ -46,6 +46,7 @@ gem 'unobtrusive_flash', '>=3'
 gem 'devise'
 gem 'devise-i18n'
 gem 'omniauth'
+gem 'simple_form'
 
 gem 'cancancan'
 gem 'rolify'

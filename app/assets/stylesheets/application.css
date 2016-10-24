@@ -11,9 +11,11 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bootstrap
+ *= require font-awesome
  *= require pnotify
  *= require home
  *= require nav
+ *= require admin
  *= require_self
  */
 .top-padding-1 {

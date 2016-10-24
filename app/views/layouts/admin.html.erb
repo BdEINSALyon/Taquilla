@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BdE INSA Lyon</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body id="admin">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+      <div class="">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="<%= root_path %>">
+            <%= image_tag 'logo-bde.png', alt: 'BdE INSA Lyon', class: 'logo-bde' %>
+          </a>
+        </div>
+        <p class="navbar-right navbar-text" style="margin-right: 15px !important;"><%= current_admin_user.email %>
+          <%= link_to :destroy_admin_user_session, class: 'navbar-link', method: :delete do %>
+              <i class="fa fa-logout text-danger"></i> Deconnexion
+          <% end %>
+        </p>
+      </div>
+    </nav>
+    <div class="row" id="content">
+      <div class="col-sm-3 sidebar">
+        <ul class="nav nav-sidebar">
+          <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Reports</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Export</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3" id="admin-page">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
