@@ -24,8 +24,9 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-select2'
   gem 'rails-assets-pnotify'
   gem 'rails-assets-momentjs'
-  gem 'rails-assets-font-awesome'
 end
+
+gem "font-awesome-rails"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

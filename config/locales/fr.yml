@@ -175,6 +175,8 @@ fr:
     dashboard:
       first_welcome: "Bienvenu sur la billetterie Inter-Asso !"
       my_events: "Mes évènements"
+    menu:
+      dashboard: "Tableau de bord"
   devise:
     sessions:
       new:

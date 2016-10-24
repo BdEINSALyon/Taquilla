@@ -1,2 +1,15 @@
-<h1>Admin::Events#edit</h1>
-<p>Find me in app/views/admin/events/edit.html.erb</p>
+<h1>Editer l'évènement <%= @event.id %></h1>
+<%= simple_form_for @event, url: admin_event_path(@event) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :location %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :seats %>
+  <%= f.input :status, collection: Event.statuses %>
+    <%= f.association :organization %>
+  <%= f.input :description %>
+    <div class="row">
+      <div class="col-xs-6"><%= link_to 'Annuler', admin_event_path, class: 'col-xs-6 btn btn-block btn-default' %></div>
+      <div class="col-xs-6"><%= f.submit class: 'col-xs-6 btn btn-block btn-primary' %></div>
+    </div>
+<% end %>

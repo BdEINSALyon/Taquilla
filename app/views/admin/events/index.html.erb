@@ -1,2 +1,13 @@
-<h1>Admin::Events#index</h1>
-<p>Find me in app/views/admin/events/index.html.erb</p>
+<h1>Evènements</h1>
+<table class="table table-bordered table-stripped">
+  <tr>
+    <th>Nom</th>
+    <th></th>
+  </tr>
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= link_to event.name, edit_admin_event_path(event) %></td>
+      <td><%= link_to admin_event_path(event), method: :delete, data: {confirm: 'Vous allez supprimer un évènement ! Voulez-vous continuer ?'}, class: 'text-danger' do %><i class="fa fa-trash"></i><% end %></td>
+    </tr>
+  <% end %>
+</table>
