@@ -48,6 +48,8 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'omniauth'
 gem 'simple_form'
+gem 'ckeditor'
+gem 'paperclip'
 
 gem 'cancancan'
 gem 'rolify'
