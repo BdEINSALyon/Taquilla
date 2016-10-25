@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require pnotify
 //= require unobtrusive_flash
+//= require ckeditor/init
 //= require cable
 //= require flashes
 //= require home

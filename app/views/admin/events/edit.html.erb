@@ -7,7 +7,7 @@
   <%= f.input :seats %>
   <%= f.input :status, collection: Event.statuses %>
     <%= f.association :organization %>
-  <%= f.input :description %>
+  <%= f.input :description, as: :ckeditor %>
     <div class="row">
       <div class="col-xs-6"><%= link_to 'Annuler', admin_event_path, class: 'col-xs-6 btn btn-block btn-default' %></div>
       <div class="col-xs-6"><%= f.submit class: 'col-xs-6 btn btn-block btn-primary' %></div>
