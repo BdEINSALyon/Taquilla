@@ -39,7 +39,7 @@ class Admin::EventsController < Admin::AdminController
   end
 
   def show
-    redirect_to action: :index
+    @event = Event.find params[:id]
   end
 
   private

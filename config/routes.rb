@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   devise_for :admin_users
   authenticated :admin_user do
     namespace :admin do
-      resources :events
+      resources :events do
+        resources :passes
+      end
     end
   end
   root to: 'home#index'

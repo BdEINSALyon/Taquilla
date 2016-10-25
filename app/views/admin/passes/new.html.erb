@@ -1,0 +1,12 @@
+<h1>Créer un billet pour <%= @event.name %></h1>
+<%= simple_form_for @pass, url: admin_event_passes_path(event_id: @event.id) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :seats %>
+    <%= f.input :price %>
+    <%= f.input :status, collection: Pass.statuses %>
+    <%= f.input :description %>
+    <div class="row">
+      <div class="col-xs-6"><%= link_to 'Annuler', admin_event_passes_path(event_id: @event.id), class: 'col-xs-6 btn btn-block btn-default' %></div>
+      <div class="col-xs-6"><%= f.submit class: 'col-xs-6 btn btn-block btn-primary' %></div>
+    </div>
+<% end %>
