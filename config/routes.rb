@@ -14,7 +14,10 @@ Rails.application.routes.draw do
   end
   root to: 'home#index'
   resources :events, only: :show do
-    resource :cart, only: [:show, :update], defaults: {format: :json}
+    resource :cart, only: [:show, :update], defaults: {format: :json} do
+      get '/buy', action: :buy, defaults: {format: :html}
+      get '/answers', action: :answers, defaults: {format: :html}
+    end
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

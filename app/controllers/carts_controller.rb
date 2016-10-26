@@ -5,6 +5,16 @@ class CartsController < ApplicationController
     @cart = cart_for @event, current_user
   end
 
+  def answers
+    if @cart.status.to_sym == :buying
+      if @cart.user.nil?
+        redirect_to @event
+      end
+      @cart.status = :answers
+      @cart.save!
+    end
+  end
+
   def show
   end
 

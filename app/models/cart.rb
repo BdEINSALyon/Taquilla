@@ -1,6 +1,6 @@
 class Cart < ApplicationRecord
   include StatusConcern
-  use_statuses %w(buying bought), default: :buying
+  use_statuses %w(buying answers bought), default: :buying
 
   has_many :tickets
   has_many :events, through: :tickets
