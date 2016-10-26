@@ -7,11 +7,11 @@
     </tr>
   </thead>
   <tbody class="tbody-passes">
-    <% cart.event.passes.each do |pass| %>
-      <tr data-id="<%= cart.to_sgid.to_s %>" data-price="<%= pass.price %>" class="line-pass">
+    <% cart.event.passes.order(:price).order(:name).each do |pass| %>
+      <tr data-id="<%= pass.to_sgid.to_s %>" data-price="<%= pass.price %>" class="line-pass">
         <td class="pass-name"><%= pass.name %></td>
         <td class="pass-price"><%= number_to_currency pass.price %></td>
-        <td><%= select_tag "passes[#{pass.to_sgid.to_s}][count]", options_for_select(0..500), class: 'pass-count', value: cart.tickets_for_pass(pass).count %></td>
+        <td><%= select_tag "passes[#{pass.to_sgid.to_s}][count]", options_for_select(0..500, cart.tickets_for_pass(pass).count), class: 'pass-count' %></td>
       </tr>
     <% end %>
   </tbody>

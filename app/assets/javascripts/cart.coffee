@@ -28,6 +28,13 @@ $ ->
         price += parseFloat($pass.data('price')) * parseFloat($pass.find('.pass-count').val())
       $this.find('.price').html(numeral(price).format('0,0.00')+' €');
       console.log(tickets);
+      $.ajax(
+        url: window.location+'/cart',
+        type: 'PUT',
+        data: {update: 'tickets_count', tickets: tickets},
+        success: (result) ->
+          console.log result
+      )
 
   $('.table-cart .pass-count').on('change', computePrice)
 

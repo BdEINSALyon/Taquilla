@@ -9,7 +9,31 @@ class CartsController < ApplicationController
   end
 
   def update
-
+    up = params[:update]
+    case up
+      when 'tickets_count'
+        tickets_count = params.require(:tickets).permit!
+        tickets_count.each do |pass_id, count|
+          count = count.to_i
+          pass = GlobalID::Locator.locate_signed pass_id
+          unless pass.nil?
+            actual_count = @cart.tickets_for_pass(pass).count
+            if actual_count < count
+              (count - actual_count).times do
+                @cart.tickets.create pass: pass
+              end
+            elsif actual_count > count
+              (actual_count - count).times do
+                @cart.tickets_for_pass(pass).first.destroy
+              end
+            end
+          end
+        end
+      else
+        # type code here
+    end
+    @cart.save!
+    render action: :show
   end
 
   private
