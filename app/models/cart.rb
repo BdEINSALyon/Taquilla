@@ -20,4 +20,8 @@ class Cart < ApplicationRecord
     amount
   end
 
+  def tickets_for_pass(pass)
+    tickets.where pass: pass
+  end
+
 end
