@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'carts/show'
+
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   devise_for :admin_users
