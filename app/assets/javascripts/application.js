@@ -19,3 +19,4 @@
 //= require cable
 //= require flashes
 //= require home
+//= require cart

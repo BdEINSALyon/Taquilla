@@ -1,0 +1,25 @@
+<table class="table table-cart" data-id="<%= cart.to_sgid.to_s %>">
+  <thead>
+    <tr>
+      <th class="col-xs-8">Nom</th>
+      <th class="col-xs-2">Prix</th>
+      <th class="col-xs-2">Quantité</th>
+    </tr>
+  </thead>
+  <tbody class="tbody-passes">
+    <% cart.event.passes.each do |pass| %>
+      <tr data-id="<%= cart.to_sgid.to_s %>" data-price="<%= pass.price %>" class="line-pass">
+        <td class="pass-name"><%= pass.name %></td>
+        <td class="pass-price"><%= number_to_currency pass.price %></td>
+        <td><%= select_tag "passes[#{pass.to_sgid.to_s}][count]", options_for_select(0..500), class: 'pass-count' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td></td>
+      <td>Total (TTC)</td>
+      <td class="price">0,00 €</td>
+    </tr>
+  </tfoot>
+</table>
