@@ -6,6 +6,30 @@
     </div>
   </div>
   <div class="row">
-    <%= render @cart %>
+    <% if current_user.nil? %>
+        <div class="col-md-8 col-md-offset-2">
+          <table class="table">
+            <thead>
+            <tr>
+              <th class="col-xs-8">Nom</th>
+              <th class="col-xs-4">Prix</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @event.passes.order(:price).order(:name).each do |pass| %>
+                <tr>
+                  <td class="pass-name"><%= pass.name %></td>
+                  <td class="pass-price"><%= number_to_currency pass.price %></td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <div>
+            <%= link_to 'Connectez-vous pour commander', session_path(:user), class: 'btn btn-block btn-success' %>
+          </div>
+        </div>
+    <% else %>
+        <%= render @cart %>
+    <% end %>
   </div>
 </div>

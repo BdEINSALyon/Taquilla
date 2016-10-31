@@ -6,7 +6,9 @@ module CartHelper
     # @param [User] user
     def cart_for(event, user)
       session[:cart] ||= {}
-      cart = nil
+      if user.nil? or event.nil?
+        raise Exception.new 'Can not get a cart for nil event or nil user!'
+      end
       if session[:cart][event.id.to_s].nil?
         if user.nil?
           cart = Cart.new event: event
